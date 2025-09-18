@@ -1,25 +1,266 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ISC Study Hub - Class 12 Excellence</title>
-    <meta name="description" content="Complete ISC Class 12 study platform with previous year papers (2018-2025), specimen papers, and interactive chapter-wise quizzes for all subjects." />
-    <meta name="keywords" content="ISC, Class 12, previous year papers, specimen papers, quizzes, physics, chemistry, mathematics, computer science, english, biology" />
-    <meta name="author" content="ISC Study Hub" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISC Study Hub - Class 12 Study Materials & Practice Tests</title>
+    <meta name="description" content="Complete ISC Class 12 study hub with previous year questions (2018-2025), specimen papers, and interactive quizzes for Physics, Chemistry, Mathematics, and more.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <div class="nav-brand">
+                    <div class="brand-icon">
+                        <i data-lucide="book-open"></i>
+                    </div>
+                    <h1 class="brand-title">ISC Study Hub</h1>
+                </div>
+                
+                <div class="nav-links">
+                    <a href="#home" class="nav-link active" data-section="home">Home</a>
+                    <a href="#previous-years" class="nav-link" data-section="previous-years">Previous Years</a>
+                    <a href="#specimen-papers" class="nav-link" data-section="specimen-papers">Specimen Papers</a>
+                    <a href="#quiz" class="nav-link" data-section="quiz">Quiz</a>
+                </div>
 
-    <meta property="og:title" content="ISC Study Hub - Class 12 Excellence" />
-    <meta property="og:description" content="Your complete companion for Class 12 ISC success. Access years of papers, practice with quizzes, and achieve excellence." />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+                <div class="nav-actions">
+                    <button class="theme-toggle" id="themeToggle">
+                        <i data-lucide="sun"></i>
+                    </button>
+                    <button class="mobile-menu-toggle" id="mobileMenuToggle">
+                        <i data-lucide="menu"></i>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
 
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="ISC Study Hub - Class 12 Excellence" />
-    <meta name="twitter:description" content="Complete ISC study platform with previous papers, specimen papers & quizzes" />
-  </head>
+    <!-- Main Content -->
+    <main class="main">
+        <!-- Home Section -->
+        <section id="home" class="section active">
+            <div class="container">
+                <!-- Hero Section -->
+                <div class="hero">
+                    <div class="hero-content">
+                        <h1 class="hero-title">Master ISC Class 12 with Confidence</h1>
+                        <p class="hero-description">
+                            Your comprehensive study companion for ISC Class 12 examinations. 
+                            Access previous year questions, practice with specimen papers, 
+                            and test your knowledge with interactive quizzes.
+                        </p>
+                        <div class="hero-stats">
+                            <div class="stat">
+                                <span class="stat-number">200+</span>
+                                <span class="stat-label">Questions</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">8</span>
+                                <span class="stat-label">Years</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-number">6</span>
+                                <span class="stat-label">Subjects</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+                <!-- Study Cards Grid -->
+                <div class="study-grid">
+                    <div class="study-card gradient-card" data-section="previous-years">
+                        <div class="card-header">
+                            <div class="card-icon gradient-primary">
+                                <i data-lucide="file-text"></i>
+                            </div>
+                            <span class="card-count">48 papers</span>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">Previous Year Questions</h3>
+                            <p class="card-description">Access ISC question papers from 2018-2025 across all subjects with detailed solutions and marking schemes.</p>
+                        </div>
+                        <div class="card-action">
+                            <span>Explore</span>
+                            <i data-lucide="arrow-right"></i>
+                        </div>
+                    </div>
+
+                    <div class="study-card" data-section="specimen-papers">
+                        <div class="card-header">
+                            <div class="card-icon">
+                                <i data-lucide="clipboard-list"></i>
+                            </div>
+                            <span class="card-count">12 papers</span>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">Specimen Papers</h3>
+                            <p class="card-description">Practice with official ISC specimen papers designed to help you understand the latest exam pattern and difficulty level.</p>
+                        </div>
+                        <div class="card-action">
+                            <span>Explore</span>
+                            <i data-lucide="arrow-right"></i>
+                        </div>
+                    </div>
+
+                    <div class="study-card" data-section="quiz">
+                        <div class="card-header">
+                            <div class="card-icon">
+                                <i data-lucide="brain"></i>
+                            </div>
+                            <span class="card-count">100+ quizzes</span>
+                        </div>
+                        <div class="card-content">
+                            <h3 class="card-title">Interactive Quizzes</h3>
+                            <p class="card-description">Test your knowledge with chapter-wise quizzes featuring multiple choice questions, timers, and instant feedback.</p>
+                        </div>
+                        <div class="card-action">
+                            <span>Explore</span>
+                            <i data-lucide="arrow-right"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Previous Years Section -->
+        <section id="previous-years" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Previous Year Questions</h2>
+                    <p class="section-description">Access ISC question papers from 2018-2025</p>
+                </div>
+
+                <!-- Filters -->
+                <div class="filters-card">
+                    <div class="search-box">
+                        <i data-lucide="search"></i>
+                        <input type="text" placeholder="Search questions, topics, or subjects..." id="searchInput">
+                    </div>
+                    
+                    <div class="filter-section">
+                        <div class="filter-group">
+                            <div class="filter-item active" data-subject="All">All Subjects</div>
+                            <div class="filter-item" data-subject="Physics">Physics</div>
+                            <div class="filter-item" data-subject="Chemistry">Chemistry</div>
+                            <div class="filter-item" data-subject="Mathematics">Mathematics</div>
+                            <div class="filter-item" data-subject="Computer Science">Computer Science</div>
+                            <div class="filter-item" data-subject="English">English</div>
+                            <div class="filter-item" data-subject="Biology">Biology</div>
+                        </div>
+                    </div>
+
+                    <div class="filter-section">
+                        <div class="filter-group">
+                            <div class="filter-item secondary active" data-year="All">All Years</div>
+                            <div class="filter-item secondary" data-year="2025">2025</div>
+                            <div class="filter-item secondary" data-year="2024">2024</div>
+                            <div class="filter-item secondary" data-year="2023">2023</div>
+                            <div class="filter-item secondary" data-year="2022">2022</div>
+                            <div class="filter-item secondary" data-year="2021">2021</div>
+                            <div class="filter-item secondary" data-year="2020">2020</div>
+                            <div class="filter-item secondary" data-year="2019">2019</div>
+                            <div class="filter-item secondary" data-year="2018">2018</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Subject Grid -->
+                <div class="subjects-grid" id="subjectsGrid">
+                    <!-- Content will be dynamically populated -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Specimen Papers Section -->
+        <section id="specimen-papers" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Specimen Papers</h2>
+                    <p class="section-description">Latest ISC specimen papers for practice</p>
+                </div>
+
+                <!-- Featured Papers -->
+                <div class="featured-section">
+                    <h3 class="subsection-title">
+                        <i data-lucide="star"></i>
+                        Featured Papers
+                    </h3>
+                    
+                    <div class="featured-grid" id="featuredPapers">
+                        <!-- Content will be dynamically populated -->
+                    </div>
+                </div>
+
+                <!-- All Papers -->
+                <div class="all-papers-section">
+                    <h3 class="subsection-title">All Specimen Papers</h3>
+                    <div class="papers-grid" id="allPapers">
+                        <!-- Content will be dynamically populated -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quiz Section -->
+        <section id="quiz" class="section">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Interactive Quizzes</h2>
+                    <p class="section-description">Test your knowledge with chapter-wise practice tests</p>
+                </div>
+
+                <!-- Quick Stats -->
+                <div class="quiz-stats">
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i data-lucide="target"></i>
+                        </div>
+                        <div class="stat-content">
+                            <span class="stat-value">85%</span>
+                            <span class="stat-label">Average Score</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i data-lucide="clock"></i>
+                        </div>
+                        <div class="stat-content">
+                            <span class="stat-value">15</span>
+                            <span class="stat-label">Minutes Avg</span>
+                        </div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-icon">
+                            <i data-lucide="trophy"></i>
+                        </div>
+                        <div class="stat-content">
+                            <span class="stat-value">42</span>
+                            <span class="stat-label">Completed</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quiz Categories -->
+                <div class="quiz-categories" id="quizCategories">
+                    <!-- Content will be dynamically populated -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
 </html>
